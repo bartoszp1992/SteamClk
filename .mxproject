@@ -1,7 +1,7 @@
 [PreviousGenFiles]
-HeaderPath=/home/bartosz/projekty/arm/workspace/10_STEAM_CLK/Inc
+HeaderPath=/home/bartosz/projekty/arm/workspace/SteamClk/Inc
 HeaderFiles=stm32f0xx_it.h;stm32f0xx_hal_conf.h;main.h;
-SourcePath=/home/bartosz/projekty/arm/workspace/10_STEAM_CLK/Src
+SourcePath=/home/bartosz/projekty/arm/workspace/SteamClk/Src
 SourceFiles=stm32f0xx_it.c;stm32f0xx_hal_msp.c;main.c;
 
 [PreviousLibFiles]

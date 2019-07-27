@@ -179,9 +179,9 @@ int main(void)
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
 	while (1) {
-	
+
 	if(SET){
-	
+
 		active_time = 0;
 		HAL_Delay(50);
 
@@ -221,9 +221,9 @@ int main(void)
 			} else if (settings == 3) {
 				display_twice(3, seconds);
 			} else if (settings == 4){
-				
+
 				if(mode == 0){
-					
+
 					display(2, 10);
 
 				}else if(mode == 1){
@@ -286,16 +286,16 @@ int main(void)
 			}
 
 			if(settings ==4){
-				
+
 				if(SET) {
 					if(mode == 0){
-					
+
 						mode = 1;
 
 					}else if(mode == 1){
 
 						mode = 0;
-					
+
 					}
 					HAL_Delay(set_delay);
 				}
@@ -312,12 +312,12 @@ int main(void)
 		}
 
 		//___________________SECTION 3 -read from RTC
-		
+
 
 
 		HAL_RTC_GetDate(&hrtc, &gDate, RTC_FORMAT_BIN);
 		HAL_RTC_GetTime(&hrtc, &gTime, RTC_FORMAT_BIN);
-		
+
 		//after each second counter change, add 1 to counter variable
 		//except settings mode and seconds check
 		if(seconds != gTime.Seconds && settings == 0 && !SET){
@@ -351,7 +351,7 @@ void SystemClock_Config(void)
   RCC_ClkInitTypeDef RCC_ClkInitStruct = {0};
   RCC_PeriphCLKInitTypeDef PeriphClkInit = {0};
 
-  /**Initializes the CPU, AHB and APB busses clocks 
+  /**Initializes the CPU, AHB and APB busses clocks
   */
   RCC_OscInitStruct.OscillatorType = RCC_OSCILLATORTYPE_HSI|RCC_OSCILLATORTYPE_HSE;
   RCC_OscInitStruct.HSEState = RCC_HSE_ON;
@@ -362,7 +362,7 @@ void SystemClock_Config(void)
   {
     Error_Handler();
   }
-  /**Initializes the CPU, AHB and APB busses clocks 
+  /**Initializes the CPU, AHB and APB busses clocks
   */
   RCC_ClkInitStruct.ClockType = RCC_CLOCKTYPE_HCLK|RCC_CLOCKTYPE_SYSCLK
                               |RCC_CLOCKTYPE_PCLK1;
@@ -401,7 +401,7 @@ static void MX_RTC_Init(void)
   /* USER CODE BEGIN RTC_Init 1 */
 
   /* USER CODE END RTC_Init 1 */
-  /**Initialize RTC Only 
+  /**Initialize RTC Only
   */
   hrtc.Instance = RTC;
   hrtc.Init.HourFormat = RTC_HOURFORMAT_24;
@@ -419,7 +419,7 @@ static void MX_RTC_Init(void)
 
   /* USER CODE END Check_RTC_BKUP */
 
-  /**Initialize RTC and set the Time and Date 
+  /**Initialize RTC and set the Time and Date
   */
   sTime.Hours = 0;
   sTime.Minutes = 0;
@@ -439,7 +439,7 @@ static void MX_RTC_Init(void)
   {
     Error_Handler();
   }
-  /**Enable the Alarm A 
+  /**Enable the Alarm A
   */
   sAlarm.AlarmTime.Hours = 0;
   sAlarm.AlarmTime.Minutes = 0;
